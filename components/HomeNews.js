@@ -17,7 +17,7 @@ const getNews = async (country,category,page,query)=>{
        url+='&page='+ page.toString();
      }
   
-     url+= "&apiKey=2b3e79fec9644215831d27eaa21a78ff";
+     url+= "&apiKey="+process.env['apiKey'];
      console.log(url);
      let result = await fetch(url)
      result  = await result.json();
